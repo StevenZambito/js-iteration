@@ -24,7 +24,7 @@
  */
 
 const yelling = words => {
-  // Your code here
+  return words.map(words => words.toUpperCase())
 }
 
 /**
@@ -37,7 +37,9 @@ const yelling = words => {
  *
  */
 
-// ...
+const doubleTrouble = nums => {
+  return nums.map(x => x * 2)
+}
 
 /*
  * 3) Define a function stringyIndexes() that takes an array of
@@ -48,7 +50,9 @@ const yelling = words => {
  *
  */
 
-// ...
+const stringyIndexes = str => {
+  return str.map(x => x + ' is at index ' + str.indexOf(x))
+}
 
 /*
  * 4) Define a function onlyTheEvenSurvive that accepts an array of
@@ -58,7 +62,9 @@ const yelling = words => {
  *
  */
 
-// ...
+const onlyTheEvenSurvive = arr => {
+  return arr.filter(number => number % 2 == 0)
+}
 
 /*
  * 5) Define a function onlyTheEvenIndexedSurvive that accepts an array of
@@ -68,7 +74,9 @@ const yelling = words => {
  *
  */
 
-// ...
+const onlyTheEvenIndexedSurvive = numbers => {
+  return (onlyEvenIndex = numbers.filter((number, index) => index % 2 == 0))
+}
 
 /*
  * 6)  Define a function bestMoviesOfTheYear that accepts an array of
@@ -87,7 +95,10 @@ const yelling = words => {
  *
  */
 
-// ...
+const bestMoviesOfTheYear = (arr, theyear) => {
+  let answer = arr.filter(obj => obj.year === theyear && obj.score > 90)
+  return answer.map(x => x.name)
+}
 
 /*
  * 7) Define a function everyoneIsOdd that accepts an array of
@@ -98,7 +109,9 @@ const yelling = words => {
  *
  */
 
-// ...
+const everyoneIsOdd = numsArray => {
+  return numsArray.every(x => x % 2 !== 0)
+}
 
 /*
  * 8) Define a function findTheNeedle that accepts an array of
@@ -109,7 +122,10 @@ const yelling = words => {
  *
  */
 
-// ...
+const findTheNeedle = arr => {
+  let answer = arr.filter(item => item.includes('needle'))
+  return answer.join('')
+}
 
 /*
  * 9) Define a function findTheNeedleIndex that accepts an array of
@@ -120,7 +136,10 @@ const yelling = words => {
  *
  */
 
-// ...
+const findTheNeedleIndex = arr => {
+  let answer = arr.filter(item => item.includes('needle')).join('')
+  return arr.indexOf(answer)
+}
 
 /*
  *` 10)  Define a function someoneToLove that accepts an array of
@@ -131,7 +150,9 @@ const yelling = words => {
  *
  */
 
-// ...
+const someoneToLove = arr => {
+  return arr.some(x => x.length === 4)
+}
 
 /*
  * 11)  Define a function objectKeys that accepts an object of
